@@ -1,0 +1,45 @@
+<entSensor>
+    <name>Cisco - Entity Sensors</name>
+    <description>This table lists the type, scale, and present value of a sensor listed in the Entity-MIB entPhysicalTable.</description>
+    <oid_index>1.3.6.1.4.1.9.9.91.1.1.1.1.4</oid_index>
+    <oid_index_parse>OID/REGEXP:.*\.([0-9]*)$</oid_index_parse>
+    <index_order_type>numeric</index_order_type>
+
+    <fields>
+        <SensorName>
+            <name>Sensor Name</name>
+            <method>get</method>
+            <source>value</source>
+            <direction>input</direction>
+            <oid>1.3.6.1.2.1.47.1.1.1.1.2</oid>
+        </SensorName>
+        <SensorType>
+            <name>Sensor Type</name>
+            <method>get</method>
+            <source>value</source>
+            <direction>input</direction>
+            <oid>1.3.6.1.4.1.9.9.91.1.1.1.1.1</oid>
+        </SensorType>
+        <SensorScale>
+            <name>Sensor Scale</name>
+            <method>get</method>
+            <source>value</source>
+            <direction>input</direction>
+            <oid>1.3.6.1.4.1.9.9.91.1.1.1.1.2</oid>
+        </SensorScale>
+        <SensorValue>
+            <name>Sensor Value</name>
+            <method>walk</method>
+            <source>value</source>
+            <direction>output</direction>
+            <oid>1.3.6.1.4.1.9.9.91.1.1.1.1.4</oid>
+        </SensorValue>
+        <SensorStatus>
+            <name>Sensor Status</name>
+            <method>get</method>
+            <source>value</source>
+            <direction>input</direction>
+            <oid>1.3.6.1.4.1.9.9.91.1.1.1.1.5</oid>
+        </SensorStatus>
+    </fields>
+</entSensor>
